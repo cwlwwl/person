@@ -84,7 +84,6 @@ class Arrow {
 			this.drawI = false;
 			this.drawJ = false;
 		}
-		this.setDrawArrow(true);
 	}
 	setDrawArrow(flag) {
 		// 拖动箭头,改变g.bi和g.bj
@@ -101,8 +100,8 @@ class Arrow {
 	}
 	draw() {
 		this.drawBase();
-		this.drawBiArrow();
 		this.drawBjArrow();
+		this.drawBiArrow();
 	}
 	//绘制向量g.bi和g.bj
 	drawBase() {

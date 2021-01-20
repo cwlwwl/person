@@ -2,7 +2,8 @@ class Main {
 	constructor() {
 		this.bc = new Bc(); 
 		this.arrow = new Arrow();
-		this.line = new Line();
+		this.baseLine = new BaseLine();
+		this.point = new Point();
 	}
 	
 	begin() {
@@ -15,11 +16,13 @@ class Main {
 	draw() {
 		this.bc.draw();
 		this.arrow.draw();
-		this.line.draw();
+		this.baseLine.draw();
+		this.point.draw();
 	}
 	update() {
 		this.bc.update();
 		this.arrow.update();
-		this.line.update();
+		this.baseLine.update();
+		this.point.update();
 	}
 }

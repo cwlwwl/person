@@ -11,18 +11,23 @@
 		<script src="js/Vector.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/vectorUtil.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/Arrow.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/Line.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/BaseLine.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/view.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Point.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
 			window.onload = e=>{
 				g.init();
+				view.onoff("point");
 			}
 		</script>
 	</head>
 	<body>
 		<div>线性变换</div>
-		<div>
-			<button onclick="view.closeDrawArrow(this)">关闭拖动箭头</button>
+		<div class="onoff">
+			<button id="arrow" onclick="view.onoff('arrow')">开箭头</button>
+			<button id="point" onclick="view.onoff('point')">开画点</button>
+			<button id="all" onclick="view.onoff('all')">全关</button>
 		</div>
 		<canvas id="mycanvas"></canvas>
 	</body>

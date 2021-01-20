@@ -1,4 +1,4 @@
-class Line {
+class BaseLine {
 	constructor() {
 	}
 	draw() {

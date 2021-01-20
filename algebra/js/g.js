@@ -14,7 +14,7 @@ const g = {
 	//状态
 	drawArrow: false,
 	//画点状态
-	drawPoint: true,
+	drawPoint: false,
 	//基变换状态
 	baseChange: false,
 	

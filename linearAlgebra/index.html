@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="./js/Line.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/MyListener.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/Main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/util.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/Vector2d.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/coordinate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/Bc.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/Spirit.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/Point.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/State.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/ShowText.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/BaseChange.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let main = null;
+			window.onload = function() {
+				main = new Main();
+			}
+		</script>
+		<style type="text/css">
+			#mycanvas {
+				display: block;
+				margin: 0 auto;
+			}
+			div {
+				border: 1px solid red;
+			}
+			#baseI {
+				width: 40px;
+				color: blue;
+			}
+			#baseJ {
+				width: 40px;
+				color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			function setTrue(flag) {
+				if(flag==1) {
+					State.drawArrow = true;
+					State.drawPoint = false;
+				}else if(flag==2) {
+					State.drawArrow = false;
+					State.drawPoint = true;
+				}else if(flag==3) {
+					main.baseChange.change();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<button onclick="setTrue(1)">拖箭头</button>
+			<button onclick="setTrue(2)">画圆</button>
+			BaseI<input id="baseI" value="[3,2]" />
+			BaseJ<input id="baseJ" value="[1,2]" />
+			<button onclick="setTrue(3)">基变换</button>
+		</div>
+		<div>
+		<canvas id="mycanvas"></canvas>
+		</div>
+		
+		<div id="mydiv"></div>
+		<div id="mydiv1">
+			
+		</div>
+		<div id="mydiv2">
+			
+		</div>
+	</body>
+</html>
+

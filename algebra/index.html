@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Bc.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/coordinate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Vector.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vectorUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Arrow.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Line.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/view.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload = e=>{
+				g.init();
+			}
+		</script>
+	</head>
+	<body>
+		<div>线性变换</div>
+		<div>
+			<button onclick="view.closeDrawArrow(this)">关闭拖动箭头</button>
+		</div>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>
+
+<style type="text/css">
+	#mycanvas {
+		display: block;
+		margin: 0 auto;
+		background: #0000FF;
+		position:relative;
+	}
+	 
+</style>
+

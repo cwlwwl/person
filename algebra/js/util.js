@@ -15,7 +15,7 @@ let util = {
 		let y2 = v2.y;
 		return Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
 	},
-	
+	//绘制线,p1,p2是表示自定义从标系下两个点的坐标系
 	drawLineByP: function(p1, p2) {
 		p1 = coordinate.toCanvas(p1);
 		p2 = coordinate.toCanvas(p2);
@@ -24,14 +24,14 @@ let util = {
 		g.ctx.lineTo(p2[0], p2[1]);
 		g.ctx.stroke();
 	},
-	
+	//绘制线,v1,v2是向量Vector对象
 	drawLineByV: function(v1, v2) {
 		let p1 = [v1.x, v1.y];
 		let p2 = [v2.x, v2.y];
 		this.drawLineByP(p1, p2);
 	},
 	
-	//绘制圆，p是表示自定义坐标系中值的数组, r是圆半径
+	//绘制圆，p表示自定义坐标系中点的从坐标, r是圆半径
 	drawArcByP: function(p,r) {
 		p = coordinate.toCanvas(p);
 		g.ctx.save();

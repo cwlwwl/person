@@ -1,0 +1,5 @@
+git add .
+git commit -m "说明...."
+git push origin master //注意，哪怕是第一次也不能用git push -u origin master
+如果远程仓库有变化更新本地仓库，使用以下命令
+git pull

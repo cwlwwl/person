@@ -9,6 +9,9 @@ const view = {
 			case "point":
 				g.drawPoint = true;
 				break;
+			case "line": 
+				g.drawLine = true;
+				break;
 			case "all": 
 				break;
 		}
@@ -18,6 +21,7 @@ const view = {
 		g.drawArrow = false;
 		g.drawPoint = false;
 		g.baseChange = false;
+		g.drawLine = false;
 		let a = document.querySelectorAll(".onoff>button");
 		for(let i=0; i<a.length; i++) {
 			a[i].style.background="red";
@@ -39,5 +43,13 @@ const view = {
 			point.innerHTML = "开画点"
 		}
 		g.main.point.setDrawPoint(g.drawPoint);
+		
+		if(g.drawLine) {
+			line.innerHTML = "关画线";
+			line.style.background = "green";
+		}else {
+			line.innerHTML = "开画线"
+		}
+		g.main.line.setDrawLine(g.drawLine);
 	} 
 }

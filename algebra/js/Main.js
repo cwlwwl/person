@@ -4,6 +4,7 @@ class Main {
 		this.arrow = new Arrow();
 		this.baseLine = new BaseLine();
 		this.point = new Point();
+		this.line = new Line();
 	}
 	
 	begin() {
@@ -18,11 +19,13 @@ class Main {
 		this.arrow.draw();
 		this.baseLine.draw();
 		this.point.draw();
+		this.line.draw();
 	}
 	update() {
 		this.bc.update();
 		this.arrow.update();
 		this.baseLine.update();
 		this.point.update();
+		this.line.update();
 	}
 }

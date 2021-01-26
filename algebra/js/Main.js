@@ -5,6 +5,9 @@ class Main {
 		this.baseLine = new BaseLine();
 		this.point = new Point();
 		this.line = new Line();
+		this.baseChange = new BaseChange();
+		this.note = new Note();
+		this.vectorsSum = new VectorsSum();
 	}
 	
 	begin() {
@@ -20,6 +23,9 @@ class Main {
 		this.baseLine.draw();
 		this.point.draw();
 		this.line.draw();
+		this.baseChange.draw();
+		this.note.draw();
+		this.vectorsSum.draw();
 	}
 	update() {
 		this.bc.update();
@@ -27,5 +33,8 @@ class Main {
 		this.baseLine.update();
 		this.point.update();
 		this.line.update();
+		this.baseChange.update();
+		this.note.update();
+		this.vectorsSum.update();
 	}
 }

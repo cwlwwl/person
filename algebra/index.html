@@ -15,21 +15,39 @@
 		<script src="js/view.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/Point.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/Line.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/BaseChange.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Note.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/VectorsSum.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript">
 			window.onload = e=>{
 				g.init();
-				view.onoff("point");
+				view.onoff("baseChange");
 			}
 		</script>
 	</head>
 	<body>
-		<div>线性变换</div>
-		<div class="onoff">
-			<button id="all" onclick="view.onoff('all')">全关</button>
-			<button id="arrow" onclick="view.onoff('arrow')">开箭头</button>
-			<button id="point" onclick="view.onoff('point')">开画点</button>
-			<button id="line" onclick="view.onoff('line')">开画线</button>
+		<div class="box">
+			<div class="onoff">
+				<button id="all" onclick="view.onoff('all')">全关</button>
+				<button id="arrow" onclick="view.onoff('arrow')">开箭头</button>
+				<button id="point" onclick="view.onoff('point')">开画点</button>
+				<button id="line" onclick="view.onoff('line')">开画线</button>
+				<button id="baseChange" onclick="view.onoff('baseChange')">开基变换</button>
+				<button id="begin">开始</button>
+			</div>
+			<div class="baseNote">
+				<div class="i">
+					basei| 
+					<input style="width: 30px" id="bix" value="3" />
+					<input style="width: 30px" id="biy" value="4" />
+			    </div>
+				<div class="j">
+					 basej
+					<input style="width: 30px" id="bjx" value="2" />
+					<input style="width: 30px" id="bjy" value="2" />
+				</div>
+			</div>
 		</div>
 		<canvas id="mycanvas"></canvas>
 	</body>
@@ -42,6 +60,21 @@
 		background: #0000FF;
 		position:relative;
 	}
-	 
+	.box {
+		display: flex;
+	}
+	.baseNote {
+		display: flex;
+	}
+	.baseNote>.i {
+		display: flex;
+		flex-direction:column
+	}
+	.baseNote>.i>input {
+		display: block;
+	}
+	.baseNote>.j>input {
+		display: block;
+	}
 </style>
 

@@ -12,6 +12,9 @@ const view = {
 			case "line": 
 				g.drawLine = true;
 				break;
+			case "baseChange":
+				g.baseChange = true;
+				break;
 			case "all": 
 				break;
 		}
@@ -51,5 +54,14 @@ const view = {
 			line.innerHTML = "开画线"
 		}
 		g.main.line.setDrawLine(g.drawLine);
+		
+		if(g.baseChange) {
+			baseChange.innerHTML = "关基变换";
+			baseChange.style.background = "green";
+			begin.style.background = "green";
+		}else {
+			baseChange.innerHTML = "开基变换"
+		}
+		g.main.baseChange.setBaseChange(g.baseChange);
 	} 
 }

@@ -15,6 +15,7 @@ class Point {
 		for(let i=0; i<this.amn.length; i++) {
 				let vmn = this.amn[i];
 				let vab = vectorUtil.mmv(g.bi, g.bj, vmn);
+				//打印测试发现，四省五入反而是修正了计算的错误
 				vab.x = Math.round(vab.x);
 				vab.y = Math.round(vab.y);
 				util.drawArcByV(vab, g.unit / 8);
